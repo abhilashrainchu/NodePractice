@@ -1,0 +1,1 @@
+console.log("Node js is used for Server side Scripting");
