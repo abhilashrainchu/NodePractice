@@ -18,6 +18,14 @@ else if (command == 'list')
 {
     console.log('listing all the notes');
 }
+else if (command == 'read')
+{
+    console.log('reading note');
+}
+else if (command == 'remove')
+{
+    console.log('remove the node');
+}
 else
 {
     console.log("no command found")
