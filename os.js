@@ -4,11 +4,16 @@ console.log("Application Started")
 
 const os = require('os');
 const fs = require('fs');
+const notes = require('./notes.js')
 var  user = os.userInfo();
 
 console.log(user);
+var res = notes.addNote();
 
-fs.appendFile("osfs.txt", 'hello' + user.username);
+console.log(res);
+
+console.log('result', notes.addition(6, 6));
+//fs.appendFile("osfs.txt", 'hello' + user.username + 'you are ${notes.age}');
 
 
 
