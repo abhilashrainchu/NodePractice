@@ -7,6 +7,7 @@ const fs = require('fs');
 const notes = require('./notes.js')
 var  user = os.userInfo();
 var unique = _.uniq([2,1,2,1,3,4,3,4]);
+var sub = _.without([1,2,3,4],1,2,3);
 
 //console.log(user);
 //var res = notes.addNote();
@@ -15,6 +16,7 @@ var unique = _.uniq([2,1,2,1,3,4,3,4]);
 console.log(_.isString("Abhilash"));
 console.log(_.isString("Abhilash"));
 console.log(unique);
+console.log(sub);
 
 //console.log(res);
 
