@@ -8,15 +8,19 @@ const notes = require('./notes.js')
 var  user = os.userInfo();
 var unique = _.uniq([2,1,2,1,3,4,3,4]);
 var sub = _.without([1,2,3,4],1,2,3);
+var array = [1];
+var other = _.concat(array,2,3,4,5,6,7,8,9,10);
+
 
 //console.log(user);
 //var res = notes.addNote();
 
 //console.log(_.isString(True));
 console.log(_.isString("Abhilash"));
-console.log(_.isString("Abhilash"));
+//console.log(_.isString("Abhilash"));
 console.log(unique);
 console.log(sub);
+console.log(other);
 
 //console.log(res);
 
