@@ -23,6 +23,7 @@ if(command == 'add')
 else if (command == 'list')
 {
     console.log('listing all the notes');
+    notes.getAll();
 }
 else if (command == 'read')
 {
