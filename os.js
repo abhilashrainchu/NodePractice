@@ -27,6 +27,7 @@ else if (command == 'list')
 else if (command == 'read')
 {
     console.log('reading note');
+    notes.addNote1(argv.name,argv.number)
 }
 else if (command == 'remove')
 {
