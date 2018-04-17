@@ -10,6 +10,10 @@ setTimeout (() => {
     console.log("inside of another call back");
 },0);
 
+setTimeout (() =>{
+    console.log("inside of diiferent call back");
+},5);
+
 
 
 
