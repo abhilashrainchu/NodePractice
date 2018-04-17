@@ -1,19 +1,47 @@
 console.log('Starting Notes.js');
 
 
-module.exports.age = 25;
-module.exports.addNote = () => {
 
-            console.log('addnote');
-            return 'New note'
+const fs = require('fs');
+var addNote  = (title, body) => {
+
+var notes = [];
+var note = {
+
+    title,
+    body
+};
+try{
+var noteString = fs.readFileSync('notes-data.json');
+    notes = JSON.parse(noteString);}
+    catch (e){
+
+    }
+    var duplicatenotes = notes.filter((note) => note.title == title);
+    if(duplicatenotes == 0){
+        notes.push(note);
+        fs.writeFileSync('notes-data.json',JSON.stringify(notes));
+    }
+
+
 };
 
-module.exports.addition = (a, b) => {
-    return a + b;
+var addNote1 = (name , number) => {
 
+    console.log("reading note" , name,number);
+};
+var getAll = () => {
+  console.log("get all functions");
 };
 
-module.exports.subs = (a,b) =>  {
-    return a - b ;
+var removeNote = (title) => {
+    console.log("removing note", title );
+};
+module.exports = {
+
+    addNote,
+    addNote1,
+    getAll,
+    removeNote
 
 };
