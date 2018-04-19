@@ -11,6 +11,6 @@
   "dependencies": {
     "npm": "^5.8.0",
     "request": "^2.85.0",
-    "yargs": "^11.0.0"
+    "yargs": "^4.8.1"
   }
 }
