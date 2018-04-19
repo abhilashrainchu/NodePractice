@@ -16,8 +16,18 @@ var command = process.argv[2];
 console.log('command:',command);
 if(command == 'add')
 {
-    console.log('adding new note');
-    notes.addNote(argv.title, argv.body);
+   var note =  notes.addNote(argv.title, argv.body);
+    if(note){
+        console.log('Note created');
+        console.log('--');
+        console.log('title: ${note.title}');
+        console.log('body: ${note.body}');
+
+    }
+    else
+    {
+console.log('no title taken');
+    }
 
 }
 else if (command == 'list')
@@ -33,6 +43,7 @@ else if (command == 'read')
 else if (command == 'remove')
 {
     console.log('remove the node');
+    notes.removeNote(argv.title);
 }
 else
 {

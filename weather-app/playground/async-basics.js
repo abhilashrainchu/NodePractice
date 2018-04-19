@@ -7,12 +7,10 @@ setTimeout (() => {
 
 setTimeout (() => {
 
-    console.log("inside of another call back");
+    console.log("Second Time out");
 },0);
 
-setTimeout (() =>{
-    console.log("inside of diiferent call back");
-},5);
+
 
 
 

@@ -1,18 +1,16 @@
-var getUser =(id , callback) => {
-var user = {
-    id : id,
-    name : 'vikram'
+var getUser = (id, callback) => {
+    var user = {
+        id: id,
+        name: 'vikram'
 
     };
     setTimeout(() => {
-       callback(user);
+        callback(user);
     });
 
 };
 
 
-
-
 getUser(31, (userObject) => {
-   console.log(userObject);
+    console.log(userObject);
 });

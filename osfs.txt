@@ -1,0 +1,1 @@
+BobbyhelloBobbyhelloBobbyhow are youhello ${user.username}hello ${user.username}!helloBobbyhelloBobbyhelloBobbyhelloBobbyyou are ${notes.age}helloBobbyyou are 25

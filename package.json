@@ -1,0 +1,23 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "This is My Nodejs Practice repository",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhilashrainchu/NodePractice.git"
+  },
+  "author": "Abhilash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhilashrainchu/NodePractice/issues"
+  },
+  "homepage": "https://github.com/abhilashrainchu/NodePractice#readme",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "yargs": "^4.7.1"
+  }
+}
