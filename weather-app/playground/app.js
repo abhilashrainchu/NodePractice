@@ -3,17 +3,17 @@ const args  = require('yargs');
 const argv = args
     .options({
        a: {
-           demand: true,
-           alias: 'address',
-           describe: 'address to fetch wather for ',
-           string: true
+           //demand: true,
+           //alias: 'address',
+          // describe: 'address to fetch weather for ',
+           //string: true
 
        }
     })
-    .help()
+    //.help()
    // .alias('help', h )
     .argv;
-console.log(argv);
+//console.log(argv);
 var encodeaddress = encodeURIComponent(argv.a);
 
 
