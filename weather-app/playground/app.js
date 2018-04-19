@@ -25,7 +25,6 @@ request({url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encod
         }
         else if(body.status === 'ZERO_RESULTS') {
             console.log("unable to find that address");
-            console.log("Abhul")
 
         }
         else if(body.status === 'OK') {
