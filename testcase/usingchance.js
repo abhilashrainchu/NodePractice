@@ -13,3 +13,4 @@ console.log(chance.phone(params));
 
 var repeat = require('repeat-string');
 console.log(repeat('A', 5));
+
