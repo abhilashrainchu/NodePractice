@@ -24,7 +24,7 @@ else{
     console.log(JSON.stringify(results,undefined,2));
     }
 });*/
-weather.getWeather();
+//weather.getWeather();
 
 
 
