@@ -1,15 +1,21 @@
 var request = require('request');
-var getWeather = () => {
+var getWeather = (lat, lng, callback) => {
     request({
-        url: 'https://api.darksky.net/forecast/e7e7a4967053b50b33b6f7e686a94b2e/35.7085641,97.4165053', JSON: true }, (error, response, body) => {
+        url: `https://api.darksky.net/forecast/e7e7a4967053b50b33b6f7e686a94b2e/${lat},${lng}`, JSON: true }, (error, response, body) => {
         if (error) {
-            console.log("unable to connect to servers");
+            callback("unable to connect to servers");
         }
         else if (response.statusCode === 400) {
-            console.log('unable to fetch error');
+            callback('unable to fetch error');
 
         }
-        else if (response.statusCode === 200)
+        else if (response.statusCode === 200) {
+            callback(undefined, {
+                temperature: body.currently.temperature,
+                apparentTempearture: body.currently.apparentTempearture
+
+            });
+        }
             console.log(JSON.parse(body).currently.temperature);
     });
 
