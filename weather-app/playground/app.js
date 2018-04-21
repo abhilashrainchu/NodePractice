@@ -16,23 +16,25 @@ const argv = args
     //.alias('help', h )
     .argv;
 //console.log(argv);
-/*geocode.geocodeAddress(argv.address, (errorMessage,results) => {
+geocode.geocodeAddress(argv.address, (errorMessage,results) => {
     if(errorMessage) {
         console.log(errorMessage);
     }
 else{
-    console.log(JSON.stringify(results,undefined,2));
-    }
-});*/
-w1.getWeather(35.7085641,97.4165053,(errorMessage,weatherResults) => {
-    if(errorMessage){
-        console.log(errorMessage);
-    }
-    else {
-        console.log(JSON.stringify(weatherResults, undefined, 2));
-    }
+    console.log(results.address);
+        w1.getWeather(results.latitude, results.longitude,(errorMessage,weatherResults) => {
+            if(errorMessage){
+                console.log(errorMessage);
+            }
+            else {
+                console.log(`It's currently ${weatherResults.temperature}.`);
+            }
 
-} );
+        } );
+
+    }
+});
+
 
 
 

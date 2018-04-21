@@ -11,14 +11,17 @@ var getWeather = (lat, lng, callback) => {
         }
         else if (response.statusCode === 200) {
             callback(undefined, {
-                temperature: body.currently.temperature,
-                apparentTempearture: body.currently.apparentTempearture
+                temperature: JSON.parse(body).currently.temperature,
+                temperature: JSON.parse(body).currently.temperature,
+                apparentTempearture: JSON.parse(body).currently.apparentTempearture,
+
 
             });
         }
-            console.log(JSON.parse(body).currently.temperature);
+            //console.log(JSON.parse(body).currently.temperature);
+
     });
 
 };
-module.exports.getWeather = getWeather();
+module.exports.getWeather = getWeather;
 
