@@ -1,0 +1,98 @@
+1)AWS Lambda is an ideal compute platform for many application scenarios, provided that you can write your application
+code in languages supported by AWS Lambda (that is, Node.js, Java, Go and C# and Python), and run within the AWS Lambda
+standard runtime environment and resources provided by Lambda.
+
+Benefits of Aws Lamda:
+1)AWS Lambda automatically runs your code without requiring you to provision or manage servers. Just write the code and
+upload it to Lambda.
+2)AWS Lambda automatically scales your application by running code in response to each trigger. Your code runs in
+parallel and processes each trigger individually, scaling precisely with the size of the workload
+3)With AWS Lambda, you are charged for every 100ms your code executes and the number of times your code is triggered.
+You don't pay anything when your code isn't running.
+
+1)Lamda is fully mangaed platform
+2)we can run with out thinking about any servers
+3)lamda is stateless
+
+Lamda is completely automated adminstration.
+lamda is high available and fault tolerance
+Lamda scales up and down based on the requirements
+
+Lamda suppor different languages
+1)Node js
+2)java
+3)Python
+
+Lamda support different platforms in aws
+1)S3
+2)Dynamo db
+3)kinesis
+4)Sns
+
+Aws Lamda is Event-driven Fundamentals
+1)Executes the code when it triggered by event
+2)Lets us fine-tune Permissions
+3)Completely automated
+
+AWS lamda Event sources
+1)publish the events that invoke lamda Function'
+2)Lamda keep track by event source Mapping
+3)Lamda executes the code by passing the event into handler
+
+Aws lamda Event sources
+1)Aws sns
+2)Aws s3
+3)aws kinesis
+4)aws ses
+5)aws dynamo db
+6)aws cognito
+7)cloud watch logs
+8)cloud formation
+
+Aws lamda event models
+1)push
+Event source Invoke lamda function
+used by s3,sns,cognito,amazon echo
+Event source mapping held in event source not lamda
+
+2)pull
+aws lamda polls the event source
+invoke lamda fucntion if there is a new event
+used by kinesis and dynamodb
+event source mapping held in Lamda
+
+
+Aws lamda push Example
+
+for example used upload file into s3 Then s3 recieves an event and invoke Lamda function.
+The lamda compress the file and Save it.
+
+Aws lamda pull example
+
+Aws lamda polls the kinesis stream and detect the record
+aws lamda invoke lamda function
+lamda fucntion process records.
+
+Aws lamda permissions:
+private by default.
+Event which invoke lamda function must have a permission
+
+Permission for services
+push model-event source need permision to invoke
+pullmodel- lamda need permision to to poll
+
+Aws lamda invocation function:
+Event:
+Executes event asynchronously
+used by dynamodb,kinesis,s3
+doesnot need to send response
+
+request response
+Executes the function synchronously
+used by http calls aws console
+sends a response
+
+Dry run
+pramater available with invoke API
+test acess and inputs
+
